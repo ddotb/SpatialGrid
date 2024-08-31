@@ -1,6 +1,9 @@
 # SpatialGrid
 Fast Spatial Hashing for Unity GameObjects with zero garbage allocation
 
+![image](https://github.com/user-attachments/assets/55a81bb4-9e31-45ac-870b-5c67a1cfad98)
+
+
 Performance on a i7-14700KF @ 3.40 GHz
 
 Tested on a build, mean results over 1000 frames:
