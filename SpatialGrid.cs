@@ -144,7 +144,7 @@ namespace ddotb
 
                 m_CellSize = cellSize;
                 
-                m_DebugColour = new Color().GetRandomNeonColor();
+                m_DebugColour = new Color.blue;
             }
 
             public void Insert(GameObject objectToAdd)
