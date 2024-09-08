@@ -144,7 +144,7 @@ namespace ddotb
 
                 m_CellSize = cellSize;
                 
-                m_DebugColour = Color.blue;
+                m_DebugColour = new Color().GetRandomNeonColor();
             }
 
             public void Insert(GameObject objectToAdd)
@@ -190,7 +190,11 @@ namespace ddotb
             public List<GameObject> BackerList;
 
             private const int PREALLOCATE_COUNT = 100;
-            
+
+            public int Count => BackerList.Count;
+
+            public GameObject this[int key] => BackerList[key];
+
             public SpatialObjectCollection()
             {
                 HashSet = new HashSet<GameObject>(PREALLOCATE_COUNT);
@@ -209,6 +213,11 @@ namespace ddotb
                 BackerList.Remove(objectToRemove);
             }
 
+            public bool Contains(GameObject objectToCheck)
+            {
+                return HashSet.Contains(objectToCheck);
+            }
+            
             public void UnionWith(SpatialObjectCollection other)
             {
                 List<GameObject> otherList = other.BackerList;
